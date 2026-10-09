@@ -1,16 +1,11 @@
 import wordmark from '../../assets/wordmark-neon.svg'
-import videoSrc from '../../assets/drop-00.mp4'
+import videoSrc from '../../assets/drop-00-web.mp4'
 
 
 
 function Hero() {
   return (
     <section className="relative flex h-svh min-h-[600px] flex-col overflow-hidden bg-void text-ivory">
-      {/* Degradado de color en escritorio: morado a la izquierda, verde a la derecha */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 hidden bg-[linear-gradient(to_right,var(--color-morado),transparent_40%,transparent_60%,var(--color-neon))] opacity-50 lg:block"
-      />
       {videoSrc && (
         // Pantalla completa en móvil; en escritorio, columna centrada que se funde con el fondo negro
         <video
