@@ -1,5 +1,5 @@
 import wordmark from '../../assets/wordmark-neon.svg'
-import videoSrc from '../../assets/drop-00-web.mp4'
+import videoSrc from '../../assets/landing-Drop00-web.mp4'
 
 
 
