@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import ButtomBuy from '../../components/ButtomBuy.jsx'
-import jersey from '../../assets/jersey-drop-00.svg'
+import jersey from '../../assets/jersey-principal.jpeg'
 import { total, quedan } from '../../data/compradores.js'
 
 function Jersey() {
@@ -11,7 +11,7 @@ function Jersey() {
         <p className="text-xs leading-[1.4] font-bold uppercase tracking-[0.72px] lg:hidden">El jersey</p>
 
         <Link to="/productos" className="flex h-[380px] items-center justify-center overflow-hidden bg-ivory lg:h-[760px] lg:flex-1">
-          <img src={jersey} alt="Jersey Drop 00" className="aspect-[620.354/581.453] w-[310px] max-w-[88%] lg:w-[620px] lg:max-w-full" />
+          <img src={jersey} alt="Jersey Drop 00" className="h-auto w-[310px] max-w-[88%] lg:w-[620px] lg:max-w-full" />
         </Link>
 
         <div className="flex w-full shrink-0 flex-col justify-between self-stretch lg:w-[400px]">

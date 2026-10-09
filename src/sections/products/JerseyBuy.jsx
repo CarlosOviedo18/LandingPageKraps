@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import ButtomBuy from '../../components/ButtomBuy.jsx'
-import jersey from '../../assets/jersey-drop-00.svg'
+import jersey from '../../assets/jersey-adelante.jpeg'
+import jerseyEspalda from '../../assets/jersey-espaldaa.jpeg'
+import jerseyManga from '../../assets/jersey-manga.jpeg'
 import { total, quedan, tallas } from '../../data/compradores.js'
 
 
@@ -10,19 +12,24 @@ const WHATSAPP = '50662365486'
 // Galería
 const vistas = [
   { nombre: 'Frente', src: jersey },
-  { nombre: 'Detalle pecho', src: jersey, recorte: { width: '213.7%', left: '-58.1%', top: '-24.2%' } },
-  { nombre: 'Detalle manga', src: jersey, recorte: { width: '377.6%', left: '-11.9%', top: '-3.2%' } },
-  { nombre: 'Espalda', src: null },
+  { nombre: 'Detalle pecho', src: jersey, recorte: {
+    width: '135%',
+    maxWidth: 'none',
+    left: '55%',
+    top: '80%',
+    transform: 'translate(-50%, -50%)',
+  }},
+  { nombre: 'Detalle manga', src: jerseyManga },
+  { nombre: 'Espalda', src: jerseyEspalda },
 ]
 
 const beneficios = ['Acceso anticipado al Drop 01', 'Jersey numerado a mano', 'Tu nombre en la página']
 
 const detalles = [
-  { titulo: 'Material', texto: 'Texto de ejemplo. Aquí va la composición de la tela y sus propiedades.' },
-  { titulo: 'Corte', texto: 'Texto de ejemplo. Aquí va el tipo de corte y cómo talla cada medida.' },
-  { titulo: 'Cuidado', texto: 'Texto de ejemplo. Aquí van las instrucciones de lavado.' },
+  { titulo: 'Material', texto: 'Tela deportiva microperforada, resistente y liviana. Sus pequeños orificios dejan pasar el aire y ayudan a que el sudor se evapore rápido.' },
+  { titulo: 'Corte', texto: 'Corte cómodo que permite moverse con libertad. Revise la guía de tallas para elegir su medida.' },
+  { titulo: 'Cuidado', texto: 'Lavar con agua fría y colores similares. No usar cloro ni suavizante. Secar a la sombra. No planchar.' },
 ]
-
 const textoStock = (n) => (n === 0 ? 'Agotada' : n === 1 ? 'Queda 1' : `Quedan ${n}`)
 
 function Vista({ vista, principal }) {

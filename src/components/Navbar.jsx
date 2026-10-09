@@ -8,7 +8,6 @@ const links = [
   { label: 'Drop 00', href: '/#drop-00' },
   { label: 'Primeros 5', href: '/#primeros-5' },
   { label: 'Jersey', href: '/#jersey' },
-  { label: 'Contacto', href: '/#contacto' },
 ]
 
 function Navbar() {
