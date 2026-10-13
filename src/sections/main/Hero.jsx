@@ -3,7 +3,7 @@ import videoSrc from '../../assets/landing-Drop00-web.mp4'
 
 
 
-function Hero() {
+function Hero({ abierto }) {
   return (
     <section className="relative flex h-svh min-h-[600px] flex-col overflow-hidden bg-void text-ivory">
       {videoSrc && (
@@ -28,9 +28,11 @@ function Hero() {
           <p className="font-bold">Drop 00</p>
           <p>Jersey de ciclismo · 5 unidades</p>
         </div>
-        <a href="#jersey" className="self-end underline transition-colors hover:text-neon">
-          Ver el jersey
-        </a>
+        {abierto && (
+          <a href="#jersey" className="self-end underline transition-colors hover:text-neon">
+            Ver el jersey
+          </a>
+        )}
       </div>
     </section>
   )

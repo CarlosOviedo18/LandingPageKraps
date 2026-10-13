@@ -10,11 +10,11 @@ const links = [
   { label: 'Jersey', href: '/#jersey' },
 ]
 
-function Navbar() {
+function Navbar({ abierto }) {
 
   const claro = useLocation().pathname !== '/'
-  const [abierto, setAbierto] = useState(false)
-  const cerrar = () => setAbierto(false)
+  const [menuAbierto, setMenuAbierto] = useState(false)
+  const cerrar = () => setMenuAbierto(false)
 
   return (
     <header className={claro ? 'bg-fondo' : 'absolute inset-x-0 top-0 z-50'}>
@@ -24,28 +24,33 @@ function Navbar() {
           <span className="text-xs leading-[1.4] font-bold uppercase tracking-[0.72px]">Kraps</span>
         </a>
 
-        {/* Escritorio: links en fila */}
-        <ul className={`hidden items-center gap-8 text-xs leading-[1.4] uppercase tracking-[0.72px] lg:flex ${claro ? 'text-ink' : 'text-ivory'}`}>
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className={`transition-colors ${claro ? 'hover:text-morado' : 'hover:text-neon'}`}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* En previa (abierto = false) solo se ve el logo */}
+        {abierto && (
+          <>
+            {/* Escritorio: links en fila */}
+            <ul className={`hidden items-center gap-8 text-xs leading-[1.4] uppercase tracking-[0.72px] lg:flex ${claro ? 'text-ink' : 'text-ivory'}`}>
+              {links.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className={`transition-colors ${claro ? 'hover:text-morado' : 'hover:text-neon'}`}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-        {/* Móvil: botón Menú */}
-        <button
-          onClick={() => setAbierto(true)}
-          className={`cursor-pointer text-xs leading-[1.4] font-bold uppercase tracking-[0.72px] lg:hidden ${claro ? 'text-ink' : 'text-ivory'}`}
-        >
-          Menú
-        </button>
+            {/* Móvil: botón Menú */}
+            <button
+              onClick={() => setMenuAbierto(true)}
+              className={`cursor-pointer text-xs leading-[1.4] font-bold uppercase tracking-[0.72px] lg:hidden ${claro ? 'text-ink' : 'text-ivory'}`}
+            >
+              Menú
+            </button>
+          </>
+        )}
       </nav>
 
       {/* Móvil: menú abierto a pantalla completa */}
-      {abierto && (
+      {menuAbierto && (
         <div className="fixed inset-0 z-50 flex flex-col justify-between overflow-y-auto bg-fondo px-5 pt-5 pb-8 text-ink lg:hidden">
           <div className="flex items-center justify-between">
             <a href="/" onClick={cerrar} className="flex items-center gap-2">
