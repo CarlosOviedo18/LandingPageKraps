@@ -94,7 +94,7 @@ function JerseyBuy() {
             <div className="flex flex-col gap-2 font-bold lg:gap-2.5">
               <p className="text-xs leading-[1.4] uppercase tracking-[0.72px]">Drop 00 · 5 unidades</p>
               <h1 className="text-[32px] leading-[1.2] tracking-[-0.32px]">Jersey Drop 00</h1>
-              <p className="text-2xl leading-[1.3]">₡35,000</p>
+              <p className="text-2xl leading-[1.3]">₡36,500</p>
             </div>
 
             <p className="text-base leading-[1.7] tracking-[0.08px]">

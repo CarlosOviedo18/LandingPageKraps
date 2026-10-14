@@ -21,7 +21,7 @@ function Jersey() {
             <div className="flex flex-col gap-1.5 lg:gap-2">
               <p className="text-xs leading-[1.4] uppercase tracking-[0.72px]">Kraps</p>
               <h2 className="text-[32px] leading-[1.2] font-bold tracking-[-0.32px]">Jersey Drop 00</h2>
-              <p className="text-2xl leading-[1.3] font-bold">₡35,000</p>
+              <p className="text-2xl leading-[1.3] font-bold">₡36,500</p>
             </div>
             <p className="text-xs leading-[1.6] tracking-[0.12px]">
               Quedan {quedan} de {total} · Tallas XS, S, M y S mujer
