@@ -23,7 +23,7 @@ const vistas = [
   { nombre: 'Espalda', src: jerseyEspalda },
 ]
 
-const beneficios = ['Acceso anticipado al Drop 01', 'Jersey numerado a mano', 'Tu nombre en la página']
+const beneficios = ['Acceso anticipado al Drop 01', 'Cada una con su tarjeta numerada a mano', 'Tu nombre en la página']
 
 const detalles = [
   { titulo: 'Material', texto: 'Tela deportiva microperforada, resistente y liviana. Sus pequeños orificios dejan pasar el aire y ayudan a que el sudor se evapore rápido.' },
@@ -106,7 +106,7 @@ function JerseyBuy() {
             <div className="flex flex-col gap-4">
               <div className="flex items-end justify-between text-xs leading-[1.4] uppercase tracking-[0.72px]">
                 <p className="font-bold">Talla{talla && `: ${talla}`}</p>
-                <Link to="/guia-tallas" className="underline transition-colors hover:text-morado">Guía de tallas</Link>
+                {/* <Link to="/guia-tallas" className="underline transition-colors hover:text-morado">Guía de tallas</Link> */}
               </div>
               <div className="flex gap-2 lg:gap-2.5">
                 {tallas.map((t) => {
