@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import ButtomBuy from '../../components/ButtomBuy.jsx'
+import Form from '../../components/Form.jsx'
 import jersey from '../../assets/jersey-adelante.jpeg'
 import jerseyEspalda from '../../assets/jersey-espaldaa.jpeg'
 import jerseyManga from '../../assets/jersey-manga.jpeg'
@@ -53,8 +54,18 @@ function Vista({ vista, principal }) {
 function JerseyBuy() {
   const [vistaActiva, setVistaActiva] = useState(0)
   const [talla, setTalla] = useState(null)
+  const [datos, setDatos] = useState({ nombre: '', provincia: '', canton: '', distrito: '', direccion: '' })
+  const completo = Object.values(datos).every((v) => v.trim())
 
-  const mensaje = `Hola, quiero el Jersey Drop 00 talla ${talla}`
+  const mensaje = [
+    'Hola, quiero el Jersey Drop 00.',
+    `Talla: ${talla}`,
+    `Nombre: ${datos.nombre}`,
+    `Provincia: ${datos.provincia}`,
+    `Cantón: ${datos.canton}`,
+    `Distrito: ${datos.distrito}`,
+    `Dirección exacta: ${datos.direccion}`,
+  ].join('\n')
   const linkWhatsapp = WHATSAPP ? `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensaje)}` : '#'
 
   return (
@@ -130,11 +141,14 @@ function JerseyBuy() {
               </div>
             </div>
 
+            {/* Formulario: aparece al elegir talla */}
+            {talla && <Form datos={datos} onChange={setDatos} />}
+
             {/* Compra */}
             <div className="flex flex-col gap-3.5 text-xs leading-[1.6] tracking-[0.12px]">
               <p>Quedan {quedan} de {total}. Los cinco incluyen los beneficios de los primeros 5.</p>
-              <ButtomBuy href={linkWhatsapp} disabled={!talla}>
-                {talla ? 'Comprar por WhatsApp' : 'Elige una talla'}
+              <ButtomBuy href={linkWhatsapp} disabled={!talla || !completo}>
+                {!talla ? 'Elige una talla' : !completo ? 'Completa tus datos' : 'Comprar por WhatsApp'}
               </ButtomBuy>
               <p>Te llevamos a WhatsApp para confirmar talla, pago y entrega.</p>
             </div>
