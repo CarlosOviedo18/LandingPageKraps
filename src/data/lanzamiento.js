@@ -5,4 +5,4 @@ export const TEXTO_FECHA = 'Jueves 22 de octubre de 2026 · 7:00 p. m. · hora d
 // null  = automático (se abre sola cuando el counter llega a 0)
 // true  = forzar página completa ya
 // false = forzar solo hero + counter
-export const FORZAR_ABIERTO = true
+export const FORZAR_ABIERTO = null
