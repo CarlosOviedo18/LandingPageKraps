@@ -1,5 +1,5 @@
 const beneficios = [
-  { titulo: 'Acceso anticipado al Drop 01', texto: 'Compran antes que nadie cuando salga el siguiente drop.' },
+  { titulo: 'Acceso anticipado al Drop #001', texto: 'Compran antes que nadie cuando salga el siguiente drop.' },
   { titulo: 'Numerado a mano', texto: 'Cada jersey lleva su tarjeta numerada a mano' },
   { titulo: 'Tu nombre en la página', texto: 'Aparece aquí, en la lista de los primeros 5.' },
 ]

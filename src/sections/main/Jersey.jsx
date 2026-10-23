@@ -11,7 +11,7 @@ function Jersey() {
         <p className="text-xs leading-[1.4] font-bold uppercase tracking-[0.72px] lg:hidden">El jersey</p>
 
         <Link to="/productos" className="flex h-[380px] items-center justify-center overflow-hidden bg-ivory lg:h-[760px] lg:flex-1">
-          <img src={jersey} alt="Jersey Drop 00" className="h-auto w-[310px] max-w-[88%] lg:w-[620px] lg:max-w-full" />
+          <img src={jersey} alt="Jersey Drop #000" className="h-auto w-[310px] max-w-[88%] lg:w-[620px] lg:max-w-full" />
         </Link>
 
         <div className="flex w-full shrink-0 flex-col justify-between self-stretch lg:w-[400px]">
@@ -20,7 +20,7 @@ function Jersey() {
           <div className="flex flex-col gap-6 lg:gap-7">
             <div className="flex flex-col gap-1.5 lg:gap-2">
               <p className="text-xs leading-[1.4] uppercase tracking-[0.72px]">Kraps</p>
-              <h2 className="text-[32px] leading-[1.2] font-bold tracking-[-0.32px]">Jersey Drop 00</h2>
+              <h2 className="text-[32px] leading-[1.2] font-bold tracking-[-0.32px]">Jersey Drop #000</h2>
               <p className="text-2xl leading-[1.3] font-bold">₡36,500</p>
             </div>
             <p className="text-xs leading-[1.6] tracking-[0.12px]">

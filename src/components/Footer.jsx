@@ -26,7 +26,7 @@ function Footer() {
 
         <div className="flex flex-col gap-1.5 border-t border-ink pt-5 text-xs leading-[1.4] uppercase tracking-[0.72px] lg:flex-row lg:items-start lg:justify-between lg:gap-0">
           <p>© 2026 Kraps</p>
-          <p>Drop 00 · Costa Rica</p>
+          <p>Drop #000 · Costa Rica</p>
         </div>
       </div>
     </footer>

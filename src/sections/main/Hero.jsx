@@ -25,7 +25,7 @@ function Hero({ abierto }) {
 
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col gap-[18px] px-5 pb-6 text-xs leading-[1.4] uppercase tracking-[0.72px] lg:flex-row lg:items-end lg:justify-between lg:gap-0 lg:px-10 lg:pb-8">
         <div className="flex flex-col gap-1.5">
-          <p className="font-bold">Drop 00</p>
+          <p className="font-bold">Drop #000</p>
           <p>Jersey de ciclismo · 5 unidades</p>
         </div>
         {abierto && (

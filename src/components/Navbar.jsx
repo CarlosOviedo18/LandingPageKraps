@@ -5,7 +5,7 @@ import logoInk from '../assets/logo-marca-ink.svg'
 import { redes } from '../data/redes.js'
 
 const links = [
-  { label: 'Drop 00', href: '/#drop-00' },
+  { label: 'Drop #000', href: '/#drop-00' },
   { label: 'Primeros 5', href: '/#primeros-5' },
   { label: 'Jersey', href: '/#jersey' },
 ]

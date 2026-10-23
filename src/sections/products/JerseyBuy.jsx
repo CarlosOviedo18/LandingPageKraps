@@ -24,11 +24,11 @@ const vistas = [
   { nombre: 'Espalda', src: jerseyEspalda },
 ]
 
-const beneficios = ['Acceso anticipado al Drop 01', 'Cada una con su tarjeta numerada a mano', 'Tu nombre en la página']
+const beneficios = ['Acceso anticipado al Drop #001', 'Cada una con su tarjeta numerada a mano', 'Tu nombre en la página']
 
 const detalles = [
   { titulo: 'Material', texto: 'Tela deportiva microperforada, resistente y liviana. Sus pequeños orificios dejan pasar el aire y ayudan a que el sudor se evapore rápido.' },
-  { titulo: 'Corte', texto: 'Corte cómodo que permite moverse con libertad. Revise la guía de tallas para elegir su medida.' },
+  { titulo: 'Corte', texto: 'Corte cómodo que permite moverse con libertad.' },
   { titulo: 'Cuidado', texto: 'Lavar con agua fría y colores similares. No usar cloro ni suavizante. Secar a la sombra. No planchar.' },
 ]
 const textoStock = (n) => (n === 0 ? 'Agotada' : n === 1 ? 'Queda 1' : `Quedan ${n}`)
@@ -58,7 +58,7 @@ function JerseyBuy() {
   const completo = Object.values(datos).every((v) => v.trim())
 
   const mensaje = [
-    'Hola, quiero el Jersey Drop 00.',
+    'Hola, quiero el Jersey Drop #000.',
     `Talla: ${talla}`,
     `Nombre: ${datos.nombre}`,
     `Provincia: ${datos.provincia}`,
@@ -75,7 +75,7 @@ function JerseyBuy() {
         <nav className="flex gap-2 pt-1 pb-4 text-xs leading-[1.4] uppercase tracking-[0.72px] lg:pt-3 lg:pb-6">
           <Link to="/" className="underline transition-colors hover:text-morado">Inicio</Link>
           <span>/</span>
-          <span>Jersey Drop 00</span>
+          <span>Jersey Drop #000</span>
         </nav>
 
         <section className="flex flex-col gap-8 pb-8 lg:flex-row lg:items-start lg:gap-[60px] lg:pb-[110px]">
@@ -103,14 +103,14 @@ function JerseyBuy() {
           {/* Info */}
           <div className="flex w-full shrink-0 flex-col gap-8 lg:w-[480px] lg:gap-9">
             <div className="flex flex-col gap-2 font-bold lg:gap-2.5">
-              <p className="text-xs leading-[1.4] uppercase tracking-[0.72px]">Drop 00 · 5 unidades</p>
-              <h1 className="text-[32px] leading-[1.2] tracking-[-0.32px]">Jersey Drop 00</h1>
+              <p className="text-xs leading-[1.4] uppercase tracking-[0.72px]">Drop #000 · 5 unidades</p>
+              <h1 className="text-[32px] leading-[1.2] tracking-[-0.32px]">Jersey Drop #000</h1>
               <p className="text-2xl leading-[1.3]">₡36,500</p>
             </div>
 
             <p className="text-base leading-[1.7] tracking-[0.08px]">
               El primer jersey de Kraps. Morado con detalles en verde neón, el nombre pintado a mano en el pecho y
-              llamas en las mangas. Cierre completo al frente. Solo existen cinco y cada uno va numerado a mano.
+              llamas en las mangas. Cierre completo al frente. 
             </p>
 
             {/* Tallas */}

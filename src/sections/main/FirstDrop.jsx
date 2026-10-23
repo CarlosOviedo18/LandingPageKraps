@@ -9,12 +9,12 @@ function FirstDrop() {
         {/* Izquierda: texto del drop */}
         <div className="flex flex-1 flex-col justify-between">
           <div className="flex flex-col gap-5 lg:gap-6">
-            <p className="text-xs leading-[1.4] font-bold uppercase tracking-[0.72px]">Drop 00</p>
+            <p className="text-xs leading-[1.4] font-bold uppercase tracking-[0.72px]">Drop #000</p>
             <h2 className="max-w-[480px] text-[32px] leading-[1.2] font-bold tracking-[-0.32px]">
               El primer drop de Kraps.
             </h2>
             <p className="max-w-[440px] text-base leading-[1.7] tracking-[0.08px]">
-              Cinco jerseys, un solo lote. Cuando se acaben, este diseño no se vuelve a producir.
+              Las primeras cinco jerseys de KRAPS, cada una con su certificado numerado.
             </p>
           </div>
           <a href="#jersey" className="hidden self-start text-xs leading-[1.4] uppercase tracking-[0.72px] underline transition-colors hover:text-morado lg:block">
